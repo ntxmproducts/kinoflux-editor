@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/kinoflux.png" alt="KinoFlux Logo" width="120" />
+  <img src="assets/KinoFlux.png" alt="KinoFlux Logo" width="120" />
   <h1>KinoFlux Video Editor</h1>
   <p>
     <strong>The All-in-One Offline Multimedia Processing Suite for Windows.</strong>
@@ -38,10 +38,11 @@ Whether you need to quickly trim a clip, merge footage, compress a large file, o
 <div id="screenshots" align="center">
   <h2>📸 Screenshots</h2>
   <br>
-  <img src="assets/KinoFluxEditorMain.png" alt="KinoFlux Dashboard" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+  <img src="assets/KinoFluxHomePage.png" alt="KinoFlux Dashboard" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
   <p><em>clean dashboard for quick access to all video tools.</em></p>
   <br>
-  <img src="assets/KinoFluxTrimmer.png" alt="KinoFlux Trimming Tool" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+  <img src="assets/KinoFluxMergeAudiosPage.png" alt="KinoFlux Trimming Tool" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
+  <img src="assets/KinoFluxResolutionConvertorPage.png" alt="KinoFlux Trimming Tool" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
   <p><em>Simple, intuitive video trimming interface.</em></p>
 </div>
 
