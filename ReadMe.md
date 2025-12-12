@@ -45,7 +45,6 @@ Whether you need to quickly trim a clip, merge footage, compress a large file, o
    <p><em>video tools page</em></p>
   <img src="assets/kinoFluxEditiorAudioToolsPage.png" alt="KinoFlux Trimming Tool" width="800" style="border-radius: 10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"/>
    <p><em>audio tools page</em></p>
-  <p><em>Simple, intuitive video trimming interface.</em></p>
 </div>
 
 ## ⬇️ Installation
