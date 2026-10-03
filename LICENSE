@@ -1,0 +1,125 @@
+KinoFlux Editor Proprietary License
+Copyright (c) 2026 ntxm.org. All rights reserved.
+
+IMPORTANT: This software and its source code are proprietary and confidential.
+They are NOT open source. No rights are granted except as expressly stated below.
+
+--------------------------------------------------------------------------------
+1. OWNERSHIP
+--------------------------------------------------------------------------------
+
+KinoFlux Editor (the "Software"), including without limitation all source code,
+object code, documentation, trademarks, product names, icons, and related
+materials, is owned by ntxm.org (the "Owner"). Title and intellectual property
+rights remain with the Owner. Third-party components that are distributed with
+the Software are not owned by the Owner; see Section 7.
+
+--------------------------------------------------------------------------------
+2. LIMITED PERMISSION TO REDISTRIBUTE THE INSTALLER ONLY
+--------------------------------------------------------------------------------
+
+Subject to this License, you may redistribute ONLY the official, unmodified
+installer or portable package (for example, the Windows Setup .exe, the portable
+.zip, or the corresponding official macOS and Linux packages) that was published
+by or on behalf of ntxm.org, and only if ALL of the following are true:
+
+  (a) The package is a complete, unmodified official build (byte-for-byte
+      identical to a build released by the Owner; no repacking, patching,
+      wrapping, or injection).
+
+  (b) The product is presented under its correct names and branding only:
+      "KinoFlux Editor", publisher / copyright "ntxm.org", and any official
+      icons or marks included in that package. You must not rename the product,
+      strip or alter copyright notices, or present it as your own product.
+
+  (c) You do not charge a fee for the Software itself that implies ownership
+      or relicensing; optional hosting or bandwidth fees must not misrepresent
+      the Software as yours.
+
+  (d) You include a clear statement that the Software is proprietary to
+      ntxm.org and that this License applies.
+
+No other redistribution is allowed.
+
+--------------------------------------------------------------------------------
+3. PROHIBITED (NO EXCEPTIONS UNLESS THE OWNER GIVES WRITTEN PERMISSION)
+--------------------------------------------------------------------------------
+
+Except for Section 2 and Section 7, you must NOT, in any case:
+
+  - Copy, publish, upload, mirror, or share the source code, build scripts,
+    intermediate artifacts, debug symbols, or non-installer binaries;
+  - Modify, translate, adapt, or create derivative works of the Software
+    for distribution;
+  - Reverse engineer, decompile, or disassemble the Software except to the
+    limited extent that applicable law expressly prohibits this restriction;
+  - Extract, reuse, or redistribute components, models, assets, or modules
+    of the Software separately from the official package;
+  - Remove, obscure, or alter proprietary notices, trademarks, or copyrights;
+  - Sublicense, sell, rent, lease, or otherwise commercialize rights in the
+    Software beyond redistributing the official package under Section 2;
+  - Use the Owner's names or marks in a way that suggests endorsement beyond
+    truthful identification of the Software.
+
+--------------------------------------------------------------------------------
+4. PERSONAL / INTERNAL USE OF AN INSTALLED COPY
+--------------------------------------------------------------------------------
+
+If you obtained an official package from the Owner or under Section 2, you
+may install and run the Software on machines you control for your own personal
+or internal business use, including processing your own files for commercial
+work. That permission does not include any right to share source, builds, or
+modified copies.
+
+--------------------------------------------------------------------------------
+5. NO WARRANTY
+--------------------------------------------------------------------------------
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. THE OWNER IS NOT LIABLE
+FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE SOFTWARE OR THIS
+LICENSE, TO THE MAXIMUM EXTENT PERMITTED BY LAW. YOU ARE RESPONSIBLE FOR KEEPING
+BACKUPS OF YOUR FILES; THE SOFTWARE WRITES NEW FILES AND DOES NOT MODIFY YOUR
+ORIGINALS, BUT THE OWNER DOES NOT GUARANTEE THAT EVERY CONVERSION IS ERROR FREE.
+
+--------------------------------------------------------------------------------
+6. TERMINATION
+--------------------------------------------------------------------------------
+
+Any breach of this License immediately terminates the permissions granted
+herein. Upon termination you must stop redistribution and destroy unauthorized
+copies. Sections 1, 3, 5, 7, and 8 survive termination.
+
+--------------------------------------------------------------------------------
+7. THIRD-PARTY COMPONENTS (THEIR OWN LICENSES APPLY)
+--------------------------------------------------------------------------------
+
+The Software starts and ships together with independent programs and libraries
+that are licensed by their own authors under their own licenses, including
+FFmpeg (GNU GPL version 3 build), ImageMagick, qpdf, Poppler, LibreOffice, and
+the Rust libraries linked into the executable. They are separate works that the
+Software runs as separate programs or links as libraries. The full list, the
+license of each component, and where to obtain the corresponding source code are
+in the file THIRD_PARTY_NOTICES.md, which is included with every package and
+shown in the application (About > Third-party licenses).
+
+Nothing in this License restricts, or grants you fewer rights than, the license of
+any third-party component: for those components their license, not Sections 2 and
+3 of this License, governs what you may do with that component. The Owner's
+proprietary License covers only the Owner's own code, assets and branding.
+
+--------------------------------------------------------------------------------
+8. PRIVACY, CONTACT, ADDITIONAL RIGHTS
+--------------------------------------------------------------------------------
+
+The Software works fully offline and does not collect or transmit data. See the
+Privacy Policy (PRIVACY.md) included with the Software.
+
+For any rights not expressly granted (including OEM licensing, source access,
+or rebranding), contact ntxm.org (contact@ntxm.org, https://ntxm.org). No
+waiver is valid unless in a writing signed by the Owner.
+
+--------------------------------------------------------------------------------
+END OF LICENSE
+--------------------------------------------------------------------------------
