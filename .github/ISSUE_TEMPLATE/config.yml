@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Product page and downloads
+    url: https://ntxm.org/products/kinoflux/videoeditor/
+    about: Features, requirements, install steps and checksums for KinoFlux Editor.
+  - name: Install help (SmartScreen and Gatekeeper)
+    url: https://github.com/ntxmproducts/kinoflux-editor#install
+    about: Steps for the Windows SmartScreen warning and the macOS "Not Opened" dialog.
+  - name: Security report (private)
+    url: https://github.com/ntxmproducts/kinoflux-editor/blob/main/SECURITY.md
+    about: Please email contact@ntxm.org instead of opening a public issue.
+  - name: Guides and notes
+    url: https://ntxm.org/blogs/
+    about: Step-by-step guides for the KinoFlux Editor tools.

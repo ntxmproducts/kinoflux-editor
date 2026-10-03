@@ -1,0 +1,72 @@
+name: Bug report
+description: Something in KinoFlux Editor did not work as expected
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. Please **do not attach private files**. If a file is needed, describe it or make a harmless sample.
+        For a security problem, email contact@ntxm.org instead (see SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: KinoFlux Editor version
+      description: Press F1 to open the About window.
+      placeholder: "0.1.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS 26
+        - macOS 15
+        - macOS 14 or older (11 to 14)
+        - Other (please describe below)
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Tool
+      description: The action shown under "What to do" (for example "Video - Compress" or "PDF - Merge").
+      placeholder: "Video - Trim"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the exact message you saw, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Add a file ...
+        2. Choose the action ...
+        3. Set the options ...
+        4. Press the start button
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: textarea
+    id: input
+    attributes:
+      label: About the input file
+      description: Format, size, length or page count, anything unusual (password protected, damaged, very large).
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt (optional)
+      description: Log files can contain file names, so check them before you paste. Do not paste private data.
+      render: text

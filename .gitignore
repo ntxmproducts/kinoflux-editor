@@ -1,0 +1,23 @@
+# Release binaries live on the Releases page, never in the repository
+*.exe
+*.msi
+*.dmg
+*.pkg
+*.zip
+*.7z
+*.AppImage
+*.deb
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Editors and scratch
+.vscode/
+.idea/
+*.swp
+*.tmp
+*.bak
+scratch/
