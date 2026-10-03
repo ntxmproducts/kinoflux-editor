@@ -397,7 +397,7 @@ You only need to do this once.
 | **System** | Windows 10 (version 1809) or Windows 11, 64-bit | macOS 11 or later (tested on macOS 26.6) |
 | **Processor** | x64 | Apple Silicon (M1 or newer). Intel Macs are not supported |
 | **Graphics** | Direct3D 11 (the interface is drawn by GPUI) | Metal |
-| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | The app is large because the helper programs are inside it; LibreOffice is a separate ~800 MB install |
+| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | Room for the app (the disk image is about 67 MB) and, for the Documents tools only, about 800 MB for LibreOffice |
 | **Network** | Not needed | Not needed |
 
 ### Uninstall
