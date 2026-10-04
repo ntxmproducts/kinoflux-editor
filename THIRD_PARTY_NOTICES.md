@@ -10,7 +10,7 @@ included, under which licence, and where the source code is.
 The full licence texts are in the `licenses` folder next to the program (install folder, or the portable folder)
 and in the `licenses` folder of the source repository: `GPL-3.0.txt`, `Apache-2.0.txt`, `ImageMagick-License.txt`,
 `LGPL-2.1.txt`, `MPL-2.0.txt`, `LUCIDE-ICONS.txt` and `rust-crates.md` (every Rust library, with its licence
-text). LibreOffice ships its own licence files inside its folder (`LICENSE.html`, `license.txt`, `NOTICE`).
+text). LibreOffice ships its own licence files inside its folder (`LICENSE.html`, `license.txt`, `NOTICE`; in the macOS app: `LibreOffice.app/Contents/Resources/LICENSE.html`, `LICENSE`, `NOTICE`).
 
 ## 1. Programs that run next to KinoFlux Editor
 
@@ -24,7 +24,7 @@ projects named below.
 | ImageMagick (magick.exe) | 7.1.2-11 Q16 x64 | all image tools | ImageMagick License (Apache-2.0 style) | https://imagemagick.org/, https://github.com/ImageMagick/ImageMagick |
 | qpdf (qpdf.exe, qpdf30.dll, zlib-flate.exe, fix-qdf.exe) | 12.2.0 | PDF merge, split, protect, repair | Apache License 2.0 | https://github.com/qpdf/qpdf |
 | Poppler (pdftoppm, pdftotext, pdfinfo and their libraries) | 26.09.0 (Windows build) | PDF to pictures, PDF to text | **GNU GPL version 2 or later** (used here under version 3) | https://poppler.freedesktop.org/, https://gitlab.freedesktop.org/poppler/poppler |
-| LibreOffice (Portable) | 26.2.1.2 | Word, Excel, PowerPoint and other document conversion (only in the full package) | Mozilla Public License 2.0 and LGPL-3.0-or-later (plus the licences of the libraries inside it, see its LICENSE.html) | https://www.libreoffice.org/, https://git.libreoffice.org/core ; the portable packaging is by PortableApps.com (GPL-2.0 launcher) |
+| LibreOffice (Portable edition on Windows, official build on macOS) | 26.2.1.2 (Windows), 26.2.6 (macOS) | Word, Excel, PowerPoint and other document conversion (included in the full Windows package and in the macOS app) | Mozilla Public License 2.0 and LGPL-3.0-or-later (plus the licences of the libraries inside it, see its LICENSE.html) | https://www.libreoffice.org/, https://git.libreoffice.org/core ; the Windows portable packaging is by PortableApps.com (GPL-2.0 launcher) |
 
 ### 1.1 FFmpeg is a GPL build - what that means for you
 
@@ -65,7 +65,7 @@ them, they are not given any address by KinoFlux Editor.
 ### 1.3 LibreOffice
 
 LibreOffice is started in the background (headless, with its own throw-away profile folder under your cache
-folder) to convert documents. It is licensed under the Mozilla Public License 2.0 / LGPL-3.0-or-later. The source
+folder) to convert documents. It is included unmodified in the Windows package and in the macOS app, and is licensed under the Mozilla Public License 2.0 / LGPL-3.0-or-later. The source
 code is available at https://git.libreoffice.org/core and from The Document Foundation. LibreOffice and the
 LibreOffice logo are trademarks of The Document Foundation; KinoFlux Editor is not affiliated with or endorsed by
 The Document Foundation, FFmpeg, ImageMagick Studio, qpdf, or the Poppler project.
@@ -86,7 +86,9 @@ The macOS app carries its own copies of the programs above, inside `KinoFlux Edi
   The JPEG 2000 coder of ImageMagick is compiled from the ImageMagick source (same licence).
 * Source code of every Homebrew component: the formula pages on https://formulae.brew.sh/ link the upstream tarballs; the same
   written offer as in section 1.1 applies (contact below) for the GPL parts, valid for three years after the release.
-* **LibreOffice is not part of the macOS package**; install it yourself (section 1.3). KinoFlux Editor only starts it.
+* **LibreOffice 26.2.6** (MPL-2.0 / LGPL-3.0-or-later, section 1.3) - the official macOS build of The Document Foundation,
+  unmodified and still carrying its own signature, in `binaries/LibreOffice.app`; its licence files are inside it
+  (`LibreOffice.app/Contents/Resources/LICENSE.html`, `LICENSE`, `NOTICE`). Source: https://download.documentfoundation.org/libreoffice/src/26.2.6/.
 
 ## 2. Rust libraries built into the program
 

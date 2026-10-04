@@ -12,7 +12,7 @@ Downloads: [Windows installer](https://github.com/ntxmproducts/kinoflux-editor/r
 
 ### macOS (Apple Silicon), verified on macOS 26.6
 - Native macOS app: menu bar (About, Hide, Quit, File, Edit, Window, Help), Cmd shortcuts and hints, Finder / Dock / Open With file opening through the single running window, document types, high-resolution support and a proper icon.
-- Helper programs bundled inside the app: FFmpeg, ImageMagick (with HEIC, AVIF, WebP and JPEG 2000), qpdf and Poppler. LibreOffice is detected in `/Applications` (not bundled) and a plain-language hint is shown when it is missing.
+- Helper programs bundled inside the app: FFmpeg, ImageMagick (with HEIC, AVIF, WebP and JPEG 2000), qpdf, Poppler and LibreOffice 26.2.6 (the official build, unmodified), so the Documents tools work without installing anything. The disk image is about 343 MB (359,417,826 bytes). It was re-published on 2026-10-04 with LibreOffice included.
 - Disk image is ad-hoc signed with the hardened runtime, shows the licence and has a branded background. It is **not notarized**, so the first start needs the one-time Gatekeeper step described in the [README](README.md#install).
 - All 53 tools and 173 end-to-end cases passed on a Mac.
 
@@ -33,8 +33,8 @@ Downloads: [Windows installer](https://github.com/ntxmproducts/kinoflux-editor/r
 
 ### Notes
 - The Windows installer and executable are not code-signed yet, so SmartScreen may show a warning.
-- Bundled programs: FFmpeg 8.0 (GPL v3 build), ImageMagick 7.1.2-11, qpdf 12.2.0, Poppler 26.09.0, LibreOffice Portable 26.2.1.2 (Windows). Licences and the source-code offer are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-- There is only one edition: the full one, with LibreOffice included on Windows. The earlier "lite" package no longer exists.
+- Bundled programs: FFmpeg 8.0 (GPL v3 build), ImageMagick 7.1.2-11, qpdf 12.2.0, Poppler 26.09.0, LibreOffice Portable 26.2.1.2 (Windows), LibreOffice 26.2.6 (macOS). Licences and the source-code offer are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- There is only one edition: the full one, with LibreOffice included on Windows and macOS. The earlier "lite" package no longer exists.
 - Known issue: the trim range slider. Type the times into the Start and End boxes. See [Known limitations](README.md#known-limitations).
 
 ## Earlier versions

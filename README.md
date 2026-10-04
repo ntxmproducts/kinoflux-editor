@@ -51,14 +51,14 @@ For Windows 10/11 and macOS (Apple Silicon).
 | Platform | File | Size | Requires |
 |:---------|:-----|-----:|:---------|
 | **Windows** | [`KinoFlux-Editor-Setup-0.1.2-x64.exe`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-Setup-0.1.2-x64.exe) | 262 MB (274,646,407 bytes) | Windows 10 (1809) or 11, 64-bit |
-| **macOS** | [`KinoFlux-Editor-0.1.2-macos-arm64.dmg`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-0.1.2-macos-arm64.dmg) | about 67 MB (69,700,218 bytes) | Apple Silicon (M1 or newer), macOS 11 or later |
+| **macOS** | [`KinoFlux-Editor-0.1.2-macos-arm64.dmg`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-0.1.2-macos-arm64.dmg) | about 343 MB (359,417,826 bytes) | Apple Silicon (M1 or newer), macOS 11 or later |
 | **Both** | [Release page for v0.1.2](https://github.com/ntxmproducts/kinoflux-editor/releases/tag/v0.1.2) | | Release notes and all files |
 
 **SHA-256 checksums** (compare them with your download before you run it):
 
 ```text
 8d9ef3e7728b33baedfcc0812e97f739fdeafede1b35ec5627db8be4c16694af  KinoFlux-Editor-Setup-0.1.2-x64.exe
-56f9722e3f24cf2304cf5d7a95a53861ef4e1914d5a3434db992942a6f19577f  KinoFlux-Editor-0.1.2-macos-arm64.dmg
+05e5c2bf90c66ab5a1cef8082f92448e465d9ef0bc8d70e58bc1fd3f9bc9ef6a  KinoFlux-Editor-0.1.2-macos-arm64.dmg
 ```
 
 ```text
@@ -136,7 +136,7 @@ Programs are started with argument lists, never a shell string. Results are writ
 | **Audio** | 6 | FFmpeg |
 | **Image** | 7 | ImageMagick |
 | **PDF** | 12 | qpdf, Poppler, native Rust |
-| **Documents** | 13 | LibreOffice (bundled on Windows, install it on macOS) |
+| **Documents** | 13 | LibreOffice (bundled on Windows and macOS) |
 
 Open an area to see every tool. The **CLI name** is what you pass to `--tool` on the command line (see [Command line](#command-line)). Every option, choice and default is listed in [docs/TOOLS.md](docs/TOOLS.md).
 
@@ -238,7 +238,7 @@ HEIC and HEIF files can be read but not written. SVG is read but not offered as 
 | **Document to HTML** | Save a Word / ODT / RTF / TXT document as a web page. | `doc-to-html` |
 | **HTML to document** | Turn a web page file into .docx or .odt. | `html-to-doc` |
 
-These 13 tools use LibreOffice. It is **included in the Windows installer**. On macOS you install it once (see [Install](#install)); the app tells you when it is missing, and every other tool keeps working.
+These 13 tools use LibreOffice. It is **included in the Windows installer and inside the Mac app**, so they work out of the box and there is nothing else to install.
 
 </details>
 
@@ -380,7 +380,7 @@ xattr -dr com.apple.quarantine "/Applications/KinoFlux Editor.app"
 
 You only need to do this once.
 
-**Documents tools on macOS:** install the free [LibreOffice](https://www.libreoffice.org/download) (about 800 MB) into `/Applications`, or run `brew install --cask libreoffice`. Without it only the 13 Documents tools show a notice; everything else works.
+**Documents tools on macOS:** LibreOffice 26.2.6 (the official build, unmodified) is bundled inside the app, so the 13 Documents tools work out of the box. There is nothing else to install.
 
 </td>
 <td valign="top" width="45%" align="center">
@@ -397,7 +397,7 @@ You only need to do this once.
 | **System** | Windows 10 (version 1809) or Windows 11, 64-bit | macOS 11 or later (tested on macOS 26.6) |
 | **Processor** | x64 | Apple Silicon (M1 or newer). Intel Macs are not supported |
 | **Graphics** | Direct3D 11 (the interface is drawn by GPUI) | Metal |
-| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | Room for the app (the disk image is about 67 MB) and, for the Documents tools only, about 800 MB for LibreOffice |
+| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | About 1 GB after installation (all helper programs and LibreOffice are included; the disk image is about 343 MB) |
 | **Network** | Not needed | Not needed |
 
 ### Uninstall
@@ -527,9 +527,9 @@ The Mac app is ad-hoc signed but not notarized by Apple, so Gatekeeper blocks th
 </details>
 
 <details>
-<summary><b>Why do the Documents tools not work on my Mac?</b></summary>
+<summary><b>Do the Documents tools work on my Mac?</b></summary>
 <br/>
-On macOS the 13 Documents tools use LibreOffice, which is not bundled with the Mac app. Install the free LibreOffice into <code>/Applications</code> (<a href="https://www.libreoffice.org/download">libreoffice.org/download</a> or <code>brew install --cask libreoffice</code>). Without it only those tools show a notice. On Windows LibreOffice is included in the installer.
+Yes. The Mac app includes LibreOffice 26.2.6 (the official build from The Document Foundation, unmodified), so the 13 Documents tools work out of the box. If they ever show a notice that LibreOffice was not found, download the disk image again and reinstall the app. On Windows LibreOffice is included in the installer too.
 </details>
 
 <details>
@@ -570,7 +570,7 @@ Being straight about what 0.1.2 does not do:
 
 - **Unsigned builds.** The Windows installer is not code-signed (SmartScreen warns). The Mac app is ad-hoc signed and **not notarized** (a one-time Gatekeeper step is needed).
 - **Platforms.** Windows 10/11 x64 and macOS on Apple Silicon only. No Intel Mac, Windows ARM64 or Linux builds yet.
-- **Documents tools on macOS** need LibreOffice installed separately (about 800 MB).
+- **Larger Mac download.** LibreOffice is bundled in the Mac app, so the disk image is about 343 MB and the app is about 1 GB once installed.
 - **Trim range slider.** In the 0.1.2 launch tests, dragging the range slider updated the Start and End boxes but the finished file was still the full length; typing the times into the **Start** and **End** boxes worked. Until that is fixed, type the times. The thumbnails and slider are still handy for finding the moment. Details: [Trim a video without re-encoding](https://ntxm.org/blogs/kinoflux-editor/trim-video-without-re-encoding/).
 - **Fast trim** copies the stream and starts at the previous keyframe, so the cut can begin a little early. Use **Precise** for exact cuts.
 - **PDF compress** works on the pictures inside a PDF; text-only PDFs barely change (use **Optimize** for a lossless pass).
@@ -593,9 +593,9 @@ Being straight about what 0.1.2 does not do:
 - **Light, dark or system theme**; remembers window size, panel width and last options. Draggable splitter, stacked layout in narrow windows.
 - **Plain-language error messages** and an **About window** (F1) with Help, Privacy, Terms, Licence, Third-party notices and Data handling.
 - **Windows installer**: per user or all users, Start menu entry, optional desktop icon and right-click entries, optional removal of your data on uninstall, silent install.
-- **macOS (Apple Silicon)**: menu bar, Cmd shortcuts, Finder / Dock / Open With file opening, Retina support, helper programs bundled inside the app. All 53 tools passed 173 end-to-end cases on a Mac (macOS 26.6).
+- **macOS (Apple Silicon)**: menu bar, Cmd shortcuts, Finder / Dock / Open With file opening, Retina support, helper programs (LibreOffice included) bundled inside the app. All 53 tools passed 173 end-to-end cases on a Mac (macOS 26.6).
 - **Offline and private by design**: no network code, no telemetry, no account, no update check.
-- Bundled programs: FFmpeg 8.0 (GPL v3 build), ImageMagick 7.1.2-11, qpdf 12.2.0, Poppler 26.09.0, LibreOffice Portable 26.2.1.2 (Windows).
+- Bundled programs: FFmpeg 8.0 (GPL v3 build), ImageMagick 7.1.2-11, qpdf 12.2.0, Poppler 26.09.0, LibreOffice Portable 26.2.1.2 (Windows), LibreOffice 26.2.6 (macOS).
 
 Full history: [CHANGELOG.md](CHANGELOG.md).
 
@@ -611,7 +611,7 @@ KinoFlux Editor itself is proprietary. It ships with independent programs that *
 | [ImageMagick](https://imagemagick.org/) 7.1.2-11 | Images | ImageMagick License (Apache-2.0 style) |
 | [qpdf](https://github.com/qpdf/qpdf) 12.2.0 | PDF merge, split, protect | Apache-2.0 |
 | [Poppler](https://poppler.freedesktop.org/) 26.09.0 | PDF to pictures and text | GNU GPL v2 or later |
-| [LibreOffice](https://www.libreoffice.org/) 26.2.1.2 | Documents tools | MPL-2.0 and LGPL-3.0-or-later |
+| [LibreOffice](https://www.libreoffice.org/) 26.2.1.2 (Windows), 26.2.6 (macOS) | Documents tools | MPL-2.0 and LGPL-3.0-or-later |
 | Rust libraries | The app itself | MIT, Apache-2.0 and others |
 
 KinoFlux Editor starts these programs as separate processes; it does not contain their code. **Source-code offer:** for at least three years from the day you received KinoFlux Editor, ntxm.org will send you the complete corresponding source code of the GPL-licensed programs in the package (FFmpeg and Poppler) on request, for no more than the cost of copying. Write to **contact@ntxm.org**. Full texts, versions and links: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). KinoFlux Editor is not affiliated with or endorsed by The Document Foundation, FFmpeg, ImageMagick Studio, qpdf or the Poppler project.
