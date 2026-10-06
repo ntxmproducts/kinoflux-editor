@@ -12,7 +12,7 @@ Downloads: [Windows installer](https://github.com/ntxmproducts/kinoflux-editor/r
 
 ### macOS (Apple Silicon), verified on macOS 26.6
 - Native macOS app: menu bar (About, Hide, Quit, File, Edit, Window, Help), Cmd shortcuts and hints, Finder / Dock / Open With file opening through the single running window, document types, high-resolution support and a proper icon.
-- Helper programs bundled inside the app: FFmpeg, ImageMagick (with HEIC, AVIF, WebP and JPEG 2000), qpdf, Poppler and LibreOffice 26.2.6 (the official build, unmodified), so the Documents tools work without installing anything. The disk image is about 343 MB (359,417,826 bytes). It was re-published on 2026-10-04 with LibreOffice included.
+- Helper programs bundled inside the app: FFmpeg, ImageMagick (with HEIC, AVIF, WebP and JPEG 2000), qpdf, Poppler and LibreOffice 26.2.6 (the official build, unmodified), so the Documents tools work without installing anything. The disk image is about 344 MB (360,250,711 bytes). It was re-published on 2026-10-04 with LibreOffice included, and both downloads were re-uploaded on 2026-10-05.
 - Disk image is ad-hoc signed with the hardened runtime, shows the licence and has a branded background. It is **not notarized**, so the first start needs the one-time Gatekeeper step described in the [README](README.md#install).
 - All 53 tools and 173 end-to-end cases passed on a Mac.
 

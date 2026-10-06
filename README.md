@@ -50,15 +50,15 @@ For Windows 10/11 and macOS (Apple Silicon).
 
 | Platform | File | Size | Requires |
 |:---------|:-----|-----:|:---------|
-| **Windows** | [`KinoFlux-Editor-Setup-0.1.2-x64.exe`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-Setup-0.1.2-x64.exe) | 262 MB (274,646,407 bytes) | Windows 10 (1809) or 11, 64-bit |
-| **macOS** | [`KinoFlux-Editor-0.1.2-macos-arm64.dmg`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-0.1.2-macos-arm64.dmg) | about 343 MB (359,417,826 bytes) | Apple Silicon (M1 or newer), macOS 11 or later |
+| **Windows** | [`KinoFlux-Editor-Setup-0.1.2-x64.exe`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-Setup-0.1.2-x64.exe) | 262 MB (275,236,457 bytes) | Windows 10 (1809) or 11, 64-bit |
+| **macOS** | [`KinoFlux-Editor-0.1.2-macos-arm64.dmg`](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-0.1.2-macos-arm64.dmg) | about 344 MB (360,250,711 bytes) | Apple Silicon (M1 or newer), macOS 11 or later |
 | **Both** | [Release page for v0.1.2](https://github.com/ntxmproducts/kinoflux-editor/releases/tag/v0.1.2) | | Release notes and all files |
 
 **SHA-256 checksums** (compare them with your download before you run it):
 
 ```text
-8d9ef3e7728b33baedfcc0812e97f739fdeafede1b35ec5627db8be4c16694af  KinoFlux-Editor-Setup-0.1.2-x64.exe
-05e5c2bf90c66ab5a1cef8082f92448e465d9ef0bc8d70e58bc1fd3f9bc9ef6a  KinoFlux-Editor-0.1.2-macos-arm64.dmg
+50541c91e5b208b604da20adf601f6c47cc88c3d17e509f6ee79485859673529  KinoFlux-Editor-Setup-0.1.2-x64.exe
+1b20312705c34f21c78f77f18e6d8cd363d90610c3ce1845daf988c8edb02a9c  KinoFlux-Editor-0.1.2-macos-arm64.dmg
 ```
 
 ```text
@@ -397,7 +397,7 @@ You only need to do this once.
 | **System** | Windows 10 (version 1809) or Windows 11, 64-bit | macOS 11 or later (tested on macOS 26.6) |
 | **Processor** | x64 | Apple Silicon (M1 or newer). Intel Macs are not supported |
 | **Graphics** | Direct3D 11 (the interface is drawn by GPUI) | Metal |
-| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | About 1 GB after installation (all helper programs and LibreOffice are included; the disk image is about 343 MB) |
+| **Disk space** | About 1.1 GB after installation (all helper programs and LibreOffice are included) | About 1 GB after installation (all helper programs and LibreOffice are included; the disk image is about 344 MB) |
 | **Network** | Not needed | Not needed |
 
 ### Uninstall
@@ -570,7 +570,7 @@ Being straight about what 0.1.2 does not do:
 
 - **Unsigned builds.** The Windows installer is not code-signed (SmartScreen warns). The Mac app is ad-hoc signed and **not notarized** (a one-time Gatekeeper step is needed).
 - **Platforms.** Windows 10/11 x64 and macOS on Apple Silicon only. No Intel Mac, Windows ARM64 or Linux builds yet.
-- **Larger Mac download.** LibreOffice is bundled in the Mac app, so the disk image is about 343 MB and the app is about 1 GB once installed.
+- **Larger Mac download.** LibreOffice is bundled in the Mac app, so the disk image is about 344 MB and the app is about 1 GB once installed.
 - **Trim range slider.** In the 0.1.2 launch tests, dragging the range slider updated the Start and End boxes but the finished file was still the full length; typing the times into the **Start** and **End** boxes worked. Until that is fixed, type the times. The thumbnails and slider are still handy for finding the moment. Details: [Trim a video without re-encoding](https://ntxm.org/blogs/kinoflux-editor/trim-video-without-re-encoding/).
 - **Fast trim** copies the stream and starts at the previous keyframe, so the cut can begin a little early. Use **Precise** for exact cuts.
 - **PDF compress** works on the pictures inside a PDF; text-only PDFs barely change (use **Optimize** for a lossless pass).
