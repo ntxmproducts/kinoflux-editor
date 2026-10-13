@@ -1,14 +1,15 @@
 # KinoFlux Editor 0.1.2: tool reference
 
-All 53 tools, every option and its default. The per-tool tables are generated from the program's own tool list, so option names, choices and defaults are exactly what the interface shows. The **slug** in brackets is what you pass to `--tool` on the command line.
+All 66 tools, every option and its default. The per-tool tables are generated from the program's own tool list, so option names, choices and defaults are exactly what the interface shows. The **slug** in brackets is what you pass to `--tool` on the command line.
 
 | Area | Tools | Engine |
 |------|------:|--------|
-| Video | 15 | FFmpeg |
-| Audio | 6 | FFmpeg |
-| Image | 7 | ImageMagick |
-| PDF | 12 | qpdf, Poppler (`pdftoppm`, `pdftotext`), native Rust |
-| Documents | 13 | LibreOffice (headless) + Poppler |
+| Video | 19 | FFmpeg |
+| Audio | 8 | FFmpeg |
+| Image | 8 | ImageMagick |
+| PDF | 16 | qpdf, Poppler (`pdftoppm`, `pdftotext`), native Rust |
+| Documents | 14 | LibreOffice (headless) + Poppler |
+| Info | 1 | native Rust |
 
 Results are written as `name_<suffix>.<ext>` next to the original (or into the folder you choose), never overwriting an existing file (` (2)` is appended), as a `.part` file that is renamed on success. Programs are always started with an argument list, never a shell string.
 
@@ -38,7 +39,7 @@ Results are written as `name_<suffix>.<ext>` next to the original (or into the f
 * **FFmpeg 8.0 quirk:** Opus in WebM/MKV prints one harmless "Error parsing Opus packet header" line.
 
 
-## Video (15 tools)
+## Video (19 tools)
 
 ### Video - Convert / compress  (`video-convert`)
 
@@ -166,7 +167,7 @@ Turn a sideways video upright or mirror it. Accepts: mp4, m4v, mov, mkv, webm, a
 | Transform | Rotate 90° clockwise / Rotate 90° counter-clockwise / Rotate 180° / Flip horizontally (mirror) / Flip vertically | Rotate 90° clockwise |
 | Quality | Smaller file / Balanced / High quality | High quality |
 
-### Video - Burn in subtitles  (`video-subtitles`)
+### Video - Add subtitles  (`video-subtitles`)
 
 Draw an .srt / .ass subtitle file onto the picture. Accepts: mp4, m4v, mov, mkv, webm, avi, wmv, flv, mpg, mpeg, 3gp, ts, m2ts, ogv.
 
@@ -185,8 +186,40 @@ Grab a still image from a video. Accepts: mp4, m4v, mov, mkv, webm, avi, wmv, fl
 | At time | text | 0:01 |
 | Picture format | PNG (lossless) / JPG (smaller) | PNG (lossless) |
 
+### Video - Split into parts  (`TBD`)
 
-## Audio (6 tools)
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Video - Change aspect ratio  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Video - Add a logo  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Video - Picture + sound to video  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+
+## Audio (8 tools)
 
 ### Audio - Convert  (`audio-convert`)
 
@@ -246,8 +279,24 @@ Smooth start and end. Accepts: mp3, m4a, aac, wav, flac, ogg, oga, opus, wma, ai
 | Fade in | 0 to 60 s | 2 |
 | Fade out | 0 to 60 s | 3 |
 
+### Audio - Remove silence  (`TBD`)
 
-## Image (7 tools)
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Audio - Edit tags and cover  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+
+## Image (8 tools)
 
 ### Image - Convert / compress  (`image-convert`)
 
@@ -329,8 +378,16 @@ Delete EXIF, GPS location and camera info. Accepts: jpg, jpeg, png, webp, bmp, t
 
 No options.
 
+### Image - Make a favicon / icon set  (`TBD`)
 
-## PDF (12 tools)
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+
+## PDF (16 tools)
 
 ### PDF - Merge  (`pdf-merge`)
 
@@ -437,8 +494,40 @@ Make one PDF from one or many pictures. Accepts: jpg, jpeg, png, webp, bmp, tif,
 | Margin _(when page = a4/letter)_ | None / Small / Medium | Small |
 | Picture quality | High quality / Balanced / Smaller file | High quality |
 
+### PDF - Arrange pages  (`TBD`)
 
-## Documents (13 tools)
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### PDF - Add page numbers  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### PDF - Extract images  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### PDF - Split by file size  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+
+## Documents (14 tools)
 
 ### Documents - PowerPoint to PDF  (`ppt-to-pdf`)
 
@@ -524,4 +613,22 @@ Turn a web page file into .docx or .odt. Accepts: html, htm.
 | Option | Choices / range | Default |
 |---|---|---|
 | Save as | Word (.docx) / OpenDocument (.odt) | Word (.docx) |
+
+### Documents - Document to pictures  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
+
+## Info (1 tool)
+
+### Info - File info with a privacy check  (`TBD`)
+
+Options to be filled from the app's own tool list.
+
+| Option | Choices / range | Default |
+|---|---|---|
+| _TBD_ | _TBD_ | _TBD_ |
 
