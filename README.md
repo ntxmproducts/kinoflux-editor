@@ -81,7 +81,7 @@ Everyday file jobs (shrink a video for email, cut a clip, merge two PDFs, turn W
 |:--------------|:---------------------|
 | Upload private files to a converter website | Files are converted **on your computer**. Nothing is uploaded, ever |
 | Create an account, accept cookies, watch a size limit | No account, no limits from a server, works with the network switched off |
-| A different site or app for video, audio, images, PDFs | **66 tools** for all five in one window |
+| A different site or app for video, audio, images, PDFs | **66 tools** for all six in one window |
 | Learn a timeline editor to make one simple cut | Plain-language options: pick the action, press the button |
 | Results that replace your original | New files next to the originals. Originals are never overwritten |
 
@@ -132,16 +132,17 @@ Programs are started with argument lists, never a shell string. Results are writ
 
 | Area | Tools | Powered by |
 |:-----|------:|:-----------|
-| **Video** | 15 | FFmpeg |
-| **Audio** | 6 | FFmpeg |
-| **Image** | 7 | ImageMagick |
-| **PDF** | 12 | qpdf, Poppler, native Rust |
-| **Documents** | 13 | LibreOffice (bundled on Windows and macOS) |
+| **Video** | 19 | FFmpeg |
+| **Audio** | 8 | FFmpeg |
+| **Image** | 8 | ImageMagick |
+| **PDF** | 16 | qpdf, Poppler, native Rust |
+| **Documents** | 14 | LibreOffice (bundled on Windows and macOS) |
+| **Info** | 1 | native Rust |
 
 Open an area to see every tool. The **CLI name** is what you pass to `--tool` on the command line (see [Command line](#command-line)). Every option, choice and default is listed in [docs/TOOLS.md](docs/TOOLS.md).
 
 <details>
-<summary><b>Video (15 tools)</b> &nbsp;<sub>mp4, m4v, mov, mkv, webm, avi, wmv, flv, mpg, mpeg, 3gp, ts, m2ts, ogv</sub></summary>
+<summary><b>Video (19 tools)</b> &nbsp;<sub>mp4, m4v, mov, mkv, webm, avi, wmv, flv, mpg, mpeg, 3gp, ts, m2ts, ogv</sub></summary>
 <br/>
 
 | Tool | What it does | CLI name |
@@ -159,13 +160,17 @@ Open an area to see every tool. The **CLI name** is what you pass to `--tool` on
 | **Make a GIF** | Turn a part of a video into an animated GIF (start, length, width, frames per second). | `video-gif` |
 | **Replace / mix audio** | Put a different sound track on a video, or mix a new one in. | `video-replace-audio` |
 | **Rotate / flip** | Turn a sideways video upright or mirror it. | `video-rotate` |
-| **Burn in subtitles** | Burn an .srt or .ass subtitle file onto the picture. | `video-subtitles` |
+| **Add subtitles** | Add an .srt/.ass subtitle track, burned in or switchable. | `video-subtitles` |
 | **Save a frame as picture** | Grab a still image from a video. | `video-frame` |
+| **Split into parts** | Split one video into several parts. | `TBD` |
+| **Change aspect ratio** | Make a video vertical (9:16), square, or another shape. | `TBD` |
+| **Add a logo** | Put your logo on a video. | `TBD` |
+| **Picture + sound to video** | Turn a song into a video with a picture. | `TBD` |
 
 </details>
 
 <details>
-<summary><b>Audio (6 tools)</b> &nbsp;<sub>mp3, m4a, aac, wav, flac, ogg, oga, opus, wma, aiff, aif</sub></summary>
+<summary><b>Audio (8 tools)</b> &nbsp;<sub>mp3, m4a, aac, wav, flac, ogg, oga, opus, wma, aiff, aif</sub></summary>
 <br/>
 
 | Tool | What it does | CLI name |
@@ -176,11 +181,13 @@ Open an area to see every tool. The **CLI name** is what you pass to `--tool` on
 | **Change speed** | Faster or slower playback without changing the pitch. | `audio-speed` |
 | **Join audio files** | Put several recordings one after another into ONE file (order = list order). | `audio-merge` |
 | **Fade in / out** | Smooth fade in and fade out. | `audio-fade` |
+| **Remove silence** | Cut long pauses and quiet parts from audio. | `TBD` |
+| **Edit tags and cover** | Edit MP3 tags and album art. | `TBD` |
 
 </details>
 
 <details>
-<summary><b>Image (7 tools)</b> &nbsp;<sub>jpg, png, webp, bmp, tif, gif, ico, heic, heif, avif, jp2, tga, psd, svg</sub></summary>
+<summary><b>Image (8 tools)</b> &nbsp;<sub>jpg, png, webp, bmp, tif, gif, ico, heic, heif, avif, jp2, tga, psd, svg</sub></summary>
 <br/>
 
 | Tool | What it does | CLI name |
@@ -192,13 +199,14 @@ Open an area to see every tool. The **CLI name** is what you pass to `--tool` on
 | **Crop / rotate** | Crop to a shape, rotate or flip. | `image-crop-rotate` |
 | **Add a watermark** | Stamp text or a logo on pictures. | `image-watermark` |
 | **Remove metadata** | Delete EXIF data, GPS location and camera info. | `image-strip` |
+| **Make a favicon / icon set** | Make a favicon and app icons. | `TBD` |
 
 HEIC and HEIF files can be read but not written. SVG is read but not offered as an output.
 
 </details>
 
 <details>
-<summary><b>PDF (12 tools)</b> &nbsp;<sub>pdf, plus pictures for "Pictures to PDF"</sub></summary>
+<summary><b>PDF (16 tools)</b> &nbsp;<sub>pdf, plus pictures for "Pictures to PDF"</sub></summary>
 <br/>
 
 | Tool | What it does | CLI name |
@@ -215,11 +223,15 @@ HEIC and HEIF files can be read but not written. SVG is read but not offered as 
 | **Remove the password** | Save an unlocked copy (you must know the password). | `pdf-unprotect` |
 | **Remove document info** | Delete author, title and creation info. | `pdf-metadata` |
 | **Pictures to PDF** | Make one PDF from one or many pictures. | `image-to-pdf` |
+| **Arrange pages** | Reorder pages in a PDF. | `TBD` |
+| **Add page numbers** | Add page numbers to a PDF. | `TBD` |
+| **Extract images** | Pull the images out of a PDF. | `TBD` |
+| **Split by file size** | Split a PDF to fit an upload limit. | `TBD` |
 
 </details>
 
 <details>
-<summary><b>Documents (13 tools)</b> &nbsp;<sub>Word, Excel, PowerPoint, OpenDocument, RTF, TXT, CSV, HTML</sub></summary>
+<summary><b>Documents (14 tools)</b> &nbsp;<sub>Word, Excel, PowerPoint, OpenDocument, RTF, TXT, CSV, HTML</sub></summary>
 <br/>
 
 | Tool | What it does | CLI name |
@@ -237,8 +249,19 @@ HEIC and HEIF files can be read but not written. SVG is read but not offered as 
 | **CSV to spreadsheet** | Open a CSV as a real Excel or ODS file. | `csv-to-sheet` |
 | **Document to HTML** | Save a Word / ODT / RTF / TXT document as a web page. | `doc-to-html` |
 | **HTML to document** | Turn a web page file into .docx or .odt. | `html-to-doc` |
+| **Document to pictures** | Save document pages (e.g. PowerPoint slides) as images. | `TBD` |
 
-These 13 tools use LibreOffice. It is **included in the Windows installer and inside the Mac app**, so they work out of the box and there is nothing else to install.
+These 14 tools use LibreOffice. It is **included in the Windows installer and inside the Mac app**, so they work out of the box and there is nothing else to install.
+
+</details>
+
+<details>
+<summary><b>Info (1 tool)</b></summary>
+<br/>
+
+| Tool | What it does | CLI name |
+|:-----|:-------------|:---------|
+| **File info with a privacy check** | Show a file's details and flag privacy risks (GPS, author) before you share. | `TBD` |
 
 </details>
 
@@ -380,7 +403,7 @@ xattr -dr com.apple.quarantine "/Applications/KinoFlux Editor.app"
 
 You only need to do this once.
 
-**Documents tools on macOS:** LibreOffice 26.2.6 (the official build, unmodified) is bundled inside the app, so the 13 Documents tools work out of the box. There is nothing else to install.
+**Documents tools on macOS:** LibreOffice 26.2.6 (the official build, unmodified) is bundled inside the app, so the 14 Documents tools work out of the box. There is nothing else to install.
 
 </td>
 <td valign="top" width="45%" align="center">
@@ -511,7 +534,7 @@ Never. Results are written as new files next to the originals (for example <code
 <details>
 <summary><b>Is this a timeline video editor?</b></summary>
 <br/>
-No. It is a batch toolbox for everyday jobs: convert, compress, trim, join, change speed, rotate, make GIFs, burn in subtitles, extract or replace audio and more. One action at a time on a list of files, not a multi-track timeline.
+No. It is a batch toolbox for everyday jobs: convert, compress, trim, join, change speed, rotate, make GIFs, add subtitles, extract or replace audio and more. One action at a time on a list of files, not a multi-track timeline.
 </details>
 
 <details>
@@ -529,7 +552,7 @@ The Mac app is ad-hoc signed but not notarized by Apple, so Gatekeeper blocks th
 <details>
 <summary><b>Do the Documents tools work on my Mac?</b></summary>
 <br/>
-Yes. The Mac app includes LibreOffice 26.2.6 (the official build from The Document Foundation, unmodified), so the 13 Documents tools work out of the box. If they ever show a notice that LibreOffice was not found, download the disk image again and reinstall the app. On Windows LibreOffice is included in the installer too.
+Yes. The Mac app includes LibreOffice 26.2.6 (the official build from The Document Foundation, unmodified), so the 14 Documents tools work out of the box. If they ever show a notice that LibreOffice was not found, download the disk image again and reinstall the app. On Windows LibreOffice is included in the installer too.
 </details>
 
 <details>
@@ -587,13 +610,13 @@ Being straight about what 0.1.2 does not do:
 
 *Released 2026-10-03. The first release of the native (Rust + GPUI) KinoFlux Editor.*
 
-- **66 tools** in five areas: Video 15, Audio 6, Image 7, PDF 12, Documents 13, all offline.
+- **66 tools** in six areas: Video 19, Audio 8, Image 8, PDF 16, Documents 14, Info 1, all offline.
 - **One window**: drag-and-drop file list, multi-select, reorder, command palette, presets per tool, results history, progress per file and overall, cancel.
 - **Trim preview** with a thumbnail strip and range slider.
 - **Light, dark or system theme**; remembers window size, panel width and last options. Draggable splitter, stacked layout in narrow windows.
 - **Plain-language error messages** and an **About window** (F1) with Help, Privacy, Terms, Licence, Third-party notices and Data handling.
 - **Windows installer**: per user or all users, Start menu entry, optional desktop icon and right-click entries, optional removal of your data on uninstall, silent install.
-- **macOS (Apple Silicon)**: menu bar, Cmd shortcuts, Finder / Dock / Open With file opening, Retina support, helper programs (LibreOffice included) bundled inside the app. all 66 tools passed 173 end-to-end cases on a Mac (macOS 26.6).
+- **macOS (Apple Silicon)**: menu bar, Cmd shortcuts, Finder / Dock / Open With file opening, Retina support, helper programs (LibreOffice included) bundled inside the app. all 66 tools passed end-to-end cases on a Mac (macOS 26.6).
 - **Offline and private by design**: no network code, no telemetry, no account, no update check.
 - Bundled programs: FFmpeg 8.0 (GPL v3 build), ImageMagick 7.1.2-11, qpdf 12.2.0, Poppler 26.09.0, LibreOffice Portable 26.2.1.2 (Windows), LibreOffice 26.2.6 (macOS).
 
