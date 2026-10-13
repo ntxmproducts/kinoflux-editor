@@ -10,19 +10,33 @@ First release of the native (Rust + GPUI) KinoFlux Editor. It replaces the earli
 
 Downloads: [Windows installer](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-Setup-0.1.2-x64.exe) | [macOS disk image](https://github.com/ntxmproducts/kinoflux-editor/releases/download/v0.1.2/KinoFlux-Editor-0.1.2-macos-arm64.dmg) | [release page](https://github.com/ntxmproducts/kinoflux-editor/releases/tag/v0.1.2)
 
+### Update of 2026-10-05 (same version, 66 tools)
+
+Both downloads were re-uploaded with 13 new tools (53 -> 66):
+
+- **Info (new area, 1):** File info with a privacy check
+- **Video (+4, 15 -> 19):** Split into parts; Change aspect ratio; Add a logo; Picture + sound to video
+- **Audio (+2, 6 -> 8):** Remove silence; Edit tags and cover
+- **Image (+1, 7 -> 8):** Make a favicon / icon set
+- **PDF (+4, 12 -> 16):** Arrange pages; Add page numbers; Extract images; Split by file size
+- **Documents (+1, 13 -> 14):** Document to pictures
+
+Also: "Burn in subtitles" became "Add subtitles" (burned in, or a track viewers turn on and off); Video Convert gained Frame rate and Black and white; Image Convert gained Black and white; PDF Optimize can repair a damaged PDF; subtitle files that are not UTF-8 no longer fail the job.
+
 ### macOS (Apple Silicon), verified on macOS 26.6
 - Native macOS app: menu bar (About, Hide, Quit, File, Edit, Window, Help), Cmd shortcuts and hints, Finder / Dock / Open With file opening through the single running window, document types, high-resolution support and a proper icon.
 - Helper programs bundled inside the app: FFmpeg, ImageMagick (with HEIC, AVIF, WebP and JPEG 2000), qpdf, Poppler and LibreOffice 26.2.6 (the official build, unmodified), so the Documents tools work without installing anything. The disk image is about 344 MB (360,250,711 bytes). It was re-published on 2026-10-04 with LibreOffice included, and both downloads were re-uploaded on 2026-10-05.
 - Disk image is ad-hoc signed with the hardened runtime, shows the licence and has a branded background. It is **not notarized**, so the first start needs the one-time Gatekeeper step described in the [README](README.md#install).
-- All 53 tools and 173 end-to-end cases passed on a Mac.
+- All 66 tools passed end-to-end cases on a Mac.
 
 ### Added
-- **53 tools in five areas**, all running offline on your computer:
-  - Video (15): convert / compress, compress to a target size, change format, change resolution, trim (thumbnail preview and range slider), change speed, remove audio, join, HLS stream package, extract audio, make a GIF, replace / mix audio, rotate / flip, burn in subtitles, save a frame.
-  - Audio (6): convert, trim, volume / normalize, change speed, join, fade in / out.
-  - Image (7): convert / compress, compress, resize, resize to a preset, crop / rotate, watermark, remove metadata.
-  - PDF (12): merge, extract / remove / split pages, pages to pictures, extract text, rotate, compress, optimize, watermark, add a password, remove the password, remove document info, pictures to PDF.
-  - Documents (13): Word, Excel and PowerPoint to PDF, PDF to Word / PowerPoint / Excel, update old Office files, Office to OpenDocument and back, spreadsheet to CSV and back, document to HTML and back.
+- **66 tools in six areas**, all running offline on your computer:
+  - Video (19): convert / compress, compress to a target size, change format, change resolution, trim (thumbnail preview and range slider), change speed, remove audio, join, HLS stream package, extract audio, make a GIF, replace / mix audio, rotate / flip, add subtitles, save a frame, split into parts, change aspect ratio, add a logo, picture + sound to video.
+  - Audio (8): convert, trim, volume / normalize, change speed, join, fade in / out, remove silence, edit tags and cover.
+  - Image (8): convert / compress, compress, resize, resize to a preset, crop / rotate, watermark, remove metadata, make a favicon / icon set.
+  - PDF (16): merge, extract / remove / split pages, pages to pictures, extract text, rotate, compress, optimize, watermark, add a password, remove the password, remove document info, pictures to PDF, arrange pages, add page numbers, extract images, split by file size.
+  - Documents (14): Word, Excel and PowerPoint to PDF, PDF to Word / PowerPoint / Excel, update old Office files, Office to OpenDocument and back, spreadsheet to CSV and back, document to HTML and back, document to pictures.
+  - Info (1): file info with a privacy check.
 - One window: file list (drag and drop, multi-select, reorder, Delete), tool panel with plain-language options, command palette (Ctrl/Cmd+K), presets per tool, results history (last 200 jobs), progress per file and overall, cancel, light / dark / system theme, remembers window size, panel width and last options.
 - Draggable splitter between the file list and the tool panel (double-click resets). Narrow windows switch to a stacked layout. Footer buttons are icons with tooltips.
 - Plain-language error messages (wrong password, damaged file, disk full, permission denied and more).
